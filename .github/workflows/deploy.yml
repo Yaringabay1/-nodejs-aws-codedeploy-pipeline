@@ -24,7 +24,6 @@ jobs:
       run: |
         aws deploy create-deployment \
         --application-name node_express_app_cd2 \
-        --deployment-group-name node_express_app_cd1
- \
+        --deployment-group-name node_express_app_cd1\
         --deployment-config-name CodeDeployDefault.OneAtATime \
         --github-location repository=${{ github.repository }},commitId=${{ github.sha }}
